@@ -1,0 +1,13 @@
+name: lightweight-python
+channels:
+  - defaults
+dependencies:
+  - python
+  - pylint
+  - scikit-learn
+  - keras
+  - kaggle
+  - pillow
+  - tqdm
+  - notebook
+prefix: /Users/robert/anaconda3/envs/lightweight-python
