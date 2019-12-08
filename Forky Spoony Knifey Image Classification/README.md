@@ -4,7 +4,7 @@ In this project, a dataset with over `100` features and at least `1000` samples 
 
 # The Dataset
 
-The dataset has about `~4200` samples and it's composed of images representing knifes, forks and spoons. It's basically a classification problem. The features are being represented by the actual pixels of each image. Each image has a resolution of `200 x 200` pixels and during the training phase, for both algorithms, the images got reduced to `140 x 140` pixels to reduce to computation time.
+The dataset has about `~4200` samples and it's composed of images representing knifes, forks and spoons. It's basically a classification problem. The features are being represented by the actual pixels of each image. Each image has a resolution of `200 x 200` pixels and during the training phase, for both algorithms, the images get reduced to `140 x 140` pixels to reduce to computation time.
 
 The only issue that has been encountered with the dataset was the lack of consistency between the train and test images. It took some time to figure that out, but once I shuffled all the data together and resampled the training and testing sets, it all went fine.
 
@@ -36,7 +36,7 @@ I have used `ReLu` activation function everywhere except the last layer which mu
 
 Since I wanted to be really sure of what I was getting from it, I decided to validate the model with K-Folds, with a `K=10`.
 
-The number of epochs is was set to `45` and the batch size to `64`.
+The number of epochs was set to `45` and the batch size to `64`.
 
 ## SVM
 
@@ -46,8 +46,8 @@ For the kernel, I decided to go with `rbf` because it's quite versatile when it 
 
 Not knowing the right hyper-parameters, I opted for finding them out by grid-searching them. I went with the following possible values for the hyper-parameters:
 
-1. `C`: 0.1, 1, 10, 100, 1000
-1. `gamma`: 0.1, 0.01, 0.001, 0.0001
+1. `C`: *0.1, 1, 10, 100, 1000*
+1. `gamma`: *0.1, 0.01, 0.001, 0.0001*
 
 Also, just like with the CNN model, I went with K-Folds (`k=5`) to better evaluate the model. The final model ended up with a `C=10` and a `gamma=0.001`.
 
